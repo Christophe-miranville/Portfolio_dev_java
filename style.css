@@ -1,0 +1,70 @@
+html {
+  margin: 40px;
+}
+body{
+  position: relative;
+}
+nav {
+  margin-bottom: 50px;
+}
+.navbar {
+  background-color: rgb(189, 184, 184);
+  border-radius: 5px;
+  box-shadow: 15px 15px 15px rgba(189, 184, 184, 0.75);
+}
+.picture_of_me {
+  display: block;
+  width: 20%;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.bio {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.welcome {
+  font-size: 3rem;
+}
+.btn {
+  box-shadow: 15px 15px 15px rgba(189, 184, 184, 0.863);
+}
+.card-img-top {
+  height: 38%;
+}
+.socials,
+.bio_button {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 30px 0;
+}
+.logo_socials {
+  width: 100px;
+}
+.card-body {
+  text-align: center;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+}
+.button_project {
+  margin-bottom: 10px;
+}
+.soon {
+  justify-content: space-evenly;
+}
+ul {
+  display: flex;
+}
+li {
+  list-style-type: none;
+  border-radius: 5px;
+}
+li:hover {
+  background-color: rgba(252, 252, 252, 0.748);
+  transition: 1.5s;
+}
+.h6_bold {
+  font-weight: bolder;
+  padding-top: 30px;
+}
