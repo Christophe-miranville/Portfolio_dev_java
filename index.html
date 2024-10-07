@@ -7,11 +7,16 @@
     <link rel="stylesheet" target="_blank" href="style.css">
     <link rel="stylesheet" target="_blank"
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
     <title>Portfolio - Christophe MIRANVILLE</title>
 </head>
 
-<body>
+<body id="body">
     <header>
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
@@ -21,33 +26,75 @@
                             <a class="nav-link" aria-current="page" href="#bio">Ma Bio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">Mes réseaux</a>
+                            <a class="nav-link" aria-current="page" href="#socials">Mes réseaux</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#projects">Mes réalisations</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Télécharger mon C.V.</a>
-                        </li>
+                        <div>
+                            <li class="nav-item">
+                                <a class="nav-link" id="btn_green" target="_blank"
+                                    href="img\CV MIRANVILLE CHRISTOPHE DEV Java.pdf"
+                                    download="CV MIRANVILLE CHRISTOPHE DEV Java.pdf"> Télécharger mon C.V.</a>
+                            </li>
+                        </div>
 
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+
     <div class="bio" id="bio">
-        <img class="picture_of_me" src="../portfolio_avec_bootstrap/img/photo_author.png" alt="Ma_photo">
-        <h1 class="text-center">Bien le Bonjour ! Moi c'est Christophe MIRANVILLE</h1>
+        <img class="picture_of_me" src="img\photo_author.png" alt="Ma_photo">
+        <h1 class="text-center me">Bonjour ! Moi c'est Christophe MIRANVILLE</h1>
         <p class="welcome text-center">Bienvenue sur mon portfolio</p>
         <p class="welcome text-center">Développeur Web Fullstack JAVA / Angular</p>
         <div class="bio_button">
-            <button type="button" class="btn btn-secondary">En savoir plus</button>
-            <!-- <button type="button" class="btn btn-secondary">Téléchargez mon C.V. (btn)</button> -->
-            <a class="btn btn-secondary ddl" target="_blank" href="img\CV MIRANVILLE CHRISTOPHE DEV Java.pdf"
+            <button type="button" class="btn" id="btn_green" data-bs-toggle="modal" data-bs-target="#MeModal">
+                En savoir plus sur moi
+            </button>
+
+            <div class="modal fade" id="MeModal" tabindex="-1" aria-labelledby="MeModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="MeModalLabel">Plus de précisions sur mes tâches
+                            </h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" id="btn-close"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div>
+                                <h6 class="h6_bold">prez</h6>
+                                <p>
+                                    moi blabla
+                                </p>
+                            </div>
+                            <div>
+                                <h6 class="h6_bold">futur</h6>
+                                wewewe
+                            </div>
+                            <div>
+                                <h6 class="h6_bold">Mce que je peux apporter</h6>
+                                bonne humeur
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                                id="btn-close">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <button type="button" class="btn" id="btn_green">Téléchargez mon C.V. (btn)</button> -->
+            <a class="btn ddl" id="btn_green" target="_blank" href="img\CV MIRANVILLE CHRISTOPHE DEV Java.pdf"
                 download="CV MIRANVILLE CHRISTOPHE DEV Java.pdf"> Télécharger mon C.V.</a>
-            <button type="button" class="btn btn-secondary">Me Contacter</button>
+            <a href="mailto:christophe.miranville@laposte.net" class="btn " alt="send_me_a_mail" id="btn_green"
+                target="_blank" rel="noreferrer">
+                Me Contacter </a>
         </div>
-        <div class="socials">
+        <div class="socials" id="socials">
             <div>
                 <a href="https://www.linkedin.com/in/christophe-miranville" target="_blank" rel="noreferrer">
                     <img class='logo_socials' src="img/LinkedIn_peach.png" alt="show_my_linkedin" /></a>
@@ -62,14 +109,15 @@
             </div>
         </div>
     </div>
-    <h2 class="text-center p-5" id="projects">Mes Réalisations :</h2>
+    <h2 class="text-center" id="projects">Mes Réalisations :</h2>
     <div class="cards d-flex justify-content-around ">
-        <div class="card" style="width: 16rem; height:26rem">
-            <img src="../portfolio_avec_bootstrap/img/Logo DiagnOz couleur.png" class="card-img-top" alt="...">
+        <div id="card" class="card" style="width: 16rem; height:26rem">
+            <img src="img/Logo DiagnOz couleur.png" class="card-img-top" alt="...">
             <div class="card-body ">
                 <h5 class="card-title">DiagnOz</h5>
                 <p class="card-text">Landing Page pour la prise de rendez-vous pour un Diagnostiqueur Immobilier</p>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#DiagnozModal">
+                <button type="button" class="btn" id="button_project" data-bs-toggle="modal"
+                    data-bs-target="#DiagnozModal">
                     Détails
                 </button>
                 <div class="modal fade" id="DiagnozModal" tabindex="-1" aria-labelledby="DiagnozModalLabel"
@@ -79,21 +127,24 @@
                             <div class="modal-header">
                                 <h1 class="modal-title fs-5" id="DiagnozModalLabel">Plus de précisions sur mes tâches
                                 </h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" id="btn-close"
                                     aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
                                 <div>
                                     <h6 class="h6_bold">Ce projet est un client en Freelance.</h6>
                                     <p>
-                                        Il s'est présenté pendant ma préparation au Titre Professionnel de DWWM. J'ai dû                                        mettre en place une organisation afin de ne délaisser aucune des tâches. C'est une landing page afin
+                                        Il s'est présenté pendant ma préparation au Titre Professionnel de DWWM. J'ai dû
+                                        mettre en place une organisation afin de ne délaisser aucune des tâches. C'est
+                                        une landing page afin
                                         d'effectuer une demande de rendez-vous pour un diagnostic immobilier. Il est
                                         utilisé par le gérant mais aussi sur les tablettes des salariés du client.
                                     </p>
                                 </div>
                                 <div>
                                     <h6 class="h6_bold">Ce que ce projet m'a apporté :</h6>
-                                    Client final, stress à gérer, des responsabilités vis à vis du client, des délais à respecter.
+                                    Client final, stress à gérer, des responsabilités vis à vis du client, des délais à
+                                    respecter.
                                     Répondre aux éxigences du client, débuguer ses clients et fixer les bugs suite au
                                     déploiement.
                                 </div>
@@ -103,21 +154,23 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                                    id="btn-close">Close</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <a target="_blank" href="https://www.diagnoz.immo/" class="btn btn-primary button_project">Visiter
+                <a target="_blank" href="https://www.diagnoz.immo/" class="btn" id="button_project">Visiter
                     le Site</a>
             </div>
         </div>
-        <div class="card" style="width: 16rem; height:26rem">
-            <img src="../portfolio_avec_bootstrap/img/kmpix.png" class="card-img-top" alt="...">
+        <div id="card" class="card" style="width: 16rem; height:26rem">
+            <img src="img/kmpix.png" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">KM PiX</h5>
                 <p class="card-text">Mon site d'auto-entrepreneur en photographie</p>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#KmpixModal">
+                <button type="button" class="btn" id="button_project" data-bs-toggle="modal"
+                    data-bs-target="#KmpixModal">
                     Détails
                 </button>
                 <div class="modal fade" id="KmpixModal" tabindex="-1" aria-labelledby="KmpixModalLabel"
@@ -127,7 +180,7 @@
                             <div class="modal-header">
                                 <h1 class="modal-title fs-5" id="KmpixModalLabel">Plus de précisions sur mes tâches
                                 </h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" id="btn-close"
                                     aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
@@ -147,30 +200,34 @@
                                     Celà m'a permis de voir que je pouvais faire ce que je voulais. J'ai pu
                                     essayer plusieurs outils.
                                     Et beaucoup de choix, je pense que mon site sera en évolution constante.
-                                    J'ai quand même une préfèrenceavec un client qui me fournit une maquette ou fournir une maquette
+                                    J'ai quand même une préfèrenceavec un client qui me fournit une maquette ou fournir
+                                    une maquette
                                     simple selon la demande du client.
                                 </div>
                                 <div>
                                     <h6 class="h6_bold">Mes tâches sur ce projet étaient essentiellement sur :</h6>
-                                    L'entièreté du projet car j'étais l'unique développeur freelance et j'en suis le client.
+                                    L'entièreté du projet car j'étais l'unique développeur freelance et j'en suis le
+                                    client.
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                                    id="btn-close">Close</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <a target="_blank" href="https://kmpix.fr/" class="btn btn-primary button_project">Visiter le
+                <a target="_blank" href="https://kmpix.fr/" class="btn" id="button_project">Visiter le
                     Site</a>
             </div>
         </div>
-        <div class="card" style="width: 16rem; height:26rem">
-            <img src="../portfolio_avec_bootstrap/img/logo1.jpg" class="card-img-top" alt="...">
+        <div id="card" class="card" style="width: 16rem; height:26rem">
+            <img src="img/logo1.png" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">L'Atelier l'Amulette</h5>
                 <p class="card-text">Site vitrine de fabrication et cours de céramique</p>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#AAmuletteModal">
+                <button type="button" class="btn" id="button_project" data-bs-toggle="modal"
+                    data-bs-target="#AAmuletteModal">
                     Détails
                 </button>
                 <div class="modal fade" id="AAmuletteModal" tabindex="-1" aria-labelledby="AAmuletteModalLabel"
@@ -180,43 +237,48 @@
                             <div class="modal-header">
                                 <h1 class="modal-title fs-5" id="AAmuletteModalLabel">Plus de précisions sur mes tâches
                                 </h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" id="btn-close"
                                     aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
                                 <div>
                                     <h6 class="h6_bold">Ce projet est un client en Freelance.</h6>
                                     <p>
-Artisante en céramique sur la région Toulousaine souhaitant mettre à jour son site web. Une évolution en site e-commerce est prévu.
+                                        Artisante en céramique sur la région Toulousaine souhaitant mettre à jour son
+                                        site web. Une évolution en site e-commerce est prévu.
                                     </p>
                                 </div>
                                 <div>
                                     <h6 class="h6_bold">Ce que ce projet m'a apporté :</h6>
                                     La cliente voulait qu'on fasse le même site internet qu'elle avait en maquette.
-                                    J'ai pu proposer quelques modifications et certaines ont été acceptés par la cliente.
+                                    J'ai pu proposer quelques modifications et certaines ont été acceptés par la
+                                    cliente.
                                 </div>
                                 <div>
                                     <h6 class="h6_bold">Mes tâches sur ce projet étaient essentiellement sur :</h6>
                                     L'entièreté du projet car j'étais l'unique développeur freelance.
-                                    Prochainement, je vais développer le site sous forme de e-commerce afin d'y permettre la vente à distance.
+                                    Prochainement, je vais développer le site sous forme de e-commerce afin d'y
+                                    permettre la vente à distance.
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                                    id="btn-close">Close</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <a target="_blank" href="https://lamulette-microatelier.com/"
-                    class="btn btn-primary button_project">Visiter le Site</a>
+                <a target="_blank" href="https://lamulette-microatelier.com/" class="btn" id="button_project">Visiter le
+                    Site</a>
             </div>
         </div>
-        <div class="card" style="width: 16rem; height:26rem">
-            <img src="../portfolio_avec_bootstrap/img/opluso.jpg" class="card-img-top" alt="...">
+        <div id="card" class="card" style="width: 16rem; height:26rem">
+            <img src="img/opluso.jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">O Plus Offrant</h5>
                 <p class="card-text">Site d'enchères entre particuliers présenté au DWWM</p>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#OPlusOModal">
+                <button type="button" class="btn" id="button_project" data-bs-toggle="modal"
+                    data-bs-target="#OPlusOModal">
                     Détails
                 </button>
                 <div class="modal fade" id="OPlusOModal" tabindex="-1" aria-labelledby="OPlusOModalLabel"
@@ -226,7 +288,7 @@ Artisante en céramique sur la région Toulousaine souhaitant mettre à jour son
                             <div class="modal-header">
                                 <h1 class="modal-title fs-5" id="OPlusOModalLabel">Plus de précisions sur mes tâches
                                 </h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" id="btn-close"
                                     aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
@@ -241,8 +303,10 @@ Artisante en céramique sur la région Toulousaine souhaitant mettre à jour son
                                 <div>
                                     <h6 class="h6_bold">Ce que ce projet m'a apporté :</h6>
                                     Travail d'équipe en méthode AGILE.
-                                    Travailler en Sprint a été un réel atout afin d'être plus flexible à la demande de nos encadrants et aux remarques des autres équipes.
-                                    Les tâches et fonctionnalités sont conforment au Titre Professionnel de DWWM Fullstack.
+                                    Travailler en Sprint a été un réel atout afin d'être plus flexible à la demande de
+                                    nos encadrants et aux remarques des autres équipes.
+                                    Les tâches et fonctionnalités sont conforment au Titre Professionnel de DWWM
+                                    Fullstack.
                                     Nous avions des postes fictifs, le mien était Scrum Master.
                                 </div>
                                 <div>
@@ -252,32 +316,34 @@ Artisante en céramique sur la région Toulousaine souhaitant mettre à jour son
                                     - la page [d'acceuil], faire en sorte que lorsqu'on clique sur une catégorie nous
                                     sommes redirigés
                                     sur la page [articles] avec uniquement les articles de la catégories cliqué par
-                                    l'utilisateur tout en lui donnant la possibilité d'ajouter une catégorie supplémentaire. (REACT) - la page [vendre], le design (HTML & CSS).
+                                    l'utilisateur tout en lui donnant la possibilité d'ajouter une catégorie
+                                    supplémentaire. (REACT) - la page [vendre], le design (HTML & CSS).
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                                    id="btn-close">Close</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <a target="_blank" href="https://o-plus-offrant-front-end-production.up.railway.app/"
-                    class="btn btn-primary button_project">Visiter le Site</a>
+                <a target="_blank" href="https://o-plus-offrant-front-end-production.up.railway.app/" class="btn"
+                    id="button_project">Visiter le Site</a>
             </div>
         </div>
     </div>
     <h2 class="text-center p-5">Mes Réalisations à venir:</h2>
     <div class="cards d-flex justify-content-around ">
 
-        <div class="card" style="width: 14rem; height:15rem">
-            <img src="../portfolio_avec_bootstrap/img/logo_daniel.png" class="card-img-top" alt="...">
+        <div id="card" class="card" style="width: 14rem; height:15rem">
+            <img src="img/logo_daniel.png" class="card-img-top" alt="...">
             <div class="card-body soon ">
                 <h5 class="card-title">Driver</h5>
                 <p class="card-text">Application pour chauffeurs VTC Premium sur la Côte d'Azur</p>
             </div>
         </div>
-        <div class="card" style="width: 14rem; height:15rem">
-            <img src="../portfolio_avec_bootstrap/img/logo_fred.jpg" class="card-img-top" alt="...">
+        <div id="card" class="card" style="width: 14rem; height:15rem">
+            <img src="img/logo_fred.jpg" class="card-img-top" alt="...">
             <div class="card-body soon ">
                 <h5 class="card-title">Fred Rebuffo</h5>
                 <p class="card-text">Site internet pour une société de sonorisation (DJ, sonorisation d'évenements)</p>
