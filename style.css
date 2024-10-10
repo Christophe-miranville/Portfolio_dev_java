@@ -86,10 +86,6 @@ li {
   border-radius: 5px;
 }
 
-li:hover {
-  background-color: rgba(252, 252, 252, 0.748);
-  transition: 1.5s;
-}
 
 .h6_bold {
   font-weight: bolder;
@@ -115,8 +111,12 @@ li:hover {
 #socials,
 #projects {
   padding-top: 80px;
-
+  
 }
 .modal-dialog{
   color: black;
+}
+.nav-link:hover, li>#btn_green:hover {
+  background-color: rgba(252, 252, 252, 0.748);
+  transition: 1.5s;
 }
