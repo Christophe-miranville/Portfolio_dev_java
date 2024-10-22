@@ -34,7 +34,7 @@ header {
 }
 
 .me {
-  padding-top: 10px;
+  padding: 30px 0;
 }
 
 .bio {
@@ -49,6 +49,10 @@ header {
 
 .btn {
   box-shadow: 10px 10px 10px rgba(189, 184, 184, 0.863);
+}
+
+.justify{
+  text-align: justify;
 }
 
 .card-img-top {
@@ -86,7 +90,6 @@ li {
   border-radius: 5px;
 }
 
-
 .h6_bold {
   font-weight: bolder;
   padding-top: 30px;
@@ -97,7 +100,7 @@ li {
   margin: 20px;
 }
 .cards {
-  margin: 60px 0;
+  margin: 30px 0;
 }
 
 #button_project {
@@ -122,4 +125,42 @@ li {
 .nav-link:hover, li>#btn_green:hover {
   background-color: rgba(252, 252, 252, 0.748);
   transition: 1.5s;
+}
+
+@media (max-width: 426px) {
+  .nav-bar{
+padding: 0!important;
+  }
+  .navbar-nav{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .nav-link{
+    display: flex;
+    font-size: 1.2rem;
+    padding: 0!important;
+  }
+  .nav-item{
+    height: 20px;
+  }
+
+  .picture_of_me {
+    width: 40%;
+    border-radius: 50%;
+  }
+
+  .bio>p{
+    font-size: 1.3rem;
+  }
+
+  .card {
+    display: flex;
+  }
+  #card{
+    width: 300px;
+  }
+}
+.footer{
+  text-align: center;
+  font-size: 1.4rem;
 }
